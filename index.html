@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Neighborhood Map Project</title>
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class ="title">
+			<h2>Places to See in DC</h2>
+		</div>
+		<div class= "options">
+			<div class ="menu">
+				<div class ="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<div class = "search-box">
+				<div id = "filter">
+					<input data-bind="textInput: filter" id = "search" placeholder="Search">
+					<ul data-bind="foreach: filteredLocations" id = "list">
+						<li data-bind="text: title, click: $parent.clicker"></li>
+					</ul>
+				</div>
+			</div>
+			<div id = "atlas">
+				<div id = "map"></div>
+			</div>
+		</div>
+		<script src = "knockout-3.4.1.js"></script>
+		<script src = "jquery.min.js"></script>
+		<script src = "main.js"></script>
+		<script async src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDAoJFDsQlPKMBH61LnBMghEJgO4s8rRzc&callback=initMap" onerror = "mapError()">
+		</script>
+	</body>
+</html>

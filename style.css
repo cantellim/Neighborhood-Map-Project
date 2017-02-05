@@ -1,0 +1,65 @@
+@media screen and (min-width: 600px) {
+html,
+body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+.title {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	width: 100%;
+}
+.options {
+	margin: auto;
+	width: 100%;
+	display: flex;
+	padding: 10px;
+	height: 100%;
+	
+}
+#atlas {
+	height: 100%;
+}
+#map {
+	bottom: 0px;
+    height: 100%;
+    left: 220px;
+    position: absolute;
+    right: 0px;
+}
+
+.search-box {
+	background: #fff;
+	height: 100%;
+	line-height: 23px;
+	text-align: left;
+	width: 340px;
+}
+
+}
+@media screen and (max-width: 450px) {
+	span {
+	display: block;
+	width: 19px;
+	height: 3px;
+	margin: 4px 0;
+	background: rgb(0,0,0);
+	z-index: 99;
+}
+	.title {
+		display: none;
+	}
+	.search-box {
+		display: none;
+	}
+	.expand {
+	display: block !important;
+    width: 85px;
+}
+	#map {
+		height: 100%;
+	}
+}
+
